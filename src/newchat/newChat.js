@@ -91,7 +91,7 @@ class NewChatComponent extends React.Component{
             .get()
         const exists= usersSnapshot.docs
             .map(_doc=> _doc.data().email)
-            .includes(this.state.username)
+            
         //this.setState({serverError: !exists})
         return exists
     }

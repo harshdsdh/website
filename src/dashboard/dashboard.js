@@ -21,8 +21,10 @@ class DashboardComponent extends React.Component{
    
     render(){
         const {classes} = this.props
+        
         return(
             <div>
+            
             <ChatListComponent history={this.props.history} 
             userEmail={this.state.email} 
             selectChatFn={this.selectChat} 
@@ -53,13 +55,20 @@ class DashboardComponent extends React.Component{
         )
     }
         signOut=()=>firebase.auth().signOut()
-        
         selectChat= async (chatIndex)=>{
             await this.setState({selectedChat:chatIndex, newChatFormVisible:false})
             this.messageRead()
         }
+        
         submitMessage=(msg)=>{
-            const docKey= this.buildDocKey(this.state.chats[this.state.selectedChat].users.filter(_usr=>_usr!==this.state.email)[0])
+            let docKey=null
+            console.log("ins",this.state.chats[this.state.selectedChat].users[0])
+            if(['coming out', 'education','pride day','traveling'].includes(this.state.chats[this.state.selectedChat].users[0])){
+                docKey= this.state.chats[this.state.selectedChat].users[0]
+            }
+            else{
+                docKey= this.buildDocKey(this.state.chats[this.state.selectedChat].users.filter(_usr=>_usr!==this.state.email)[0])
+            }
             firebase
             .firestore()
             .collection('chats')
@@ -77,7 +86,13 @@ class DashboardComponent extends React.Component{
         buildDocKey=(friend)=>[this.state.email, friend].sort().join(':')
         newChatBtnClicked=()=> this.setState({newChatFormVisible:true, selectedChat:null})
         messageRead=()=>{
-            const docKey= this.buildDocKey(this.state.chats[this.state.selectedChat].users.filter(_usr =>_usr!==this.state.email)[0])
+            let docKey=null
+            if(['coming out', 'education','pride day','traveling'].includes(this.state.chats[this.state.selectedChat].users[0])){
+                docKey = this.state.chats[this.state.selectedChat].users[0]
+            }
+            else{
+                docKey= this.buildDocKey(this.state.chats[this.state.selectedChat].users.filter(_usr =>_usr!==this.state.email)[0])
+            }
             if(this.clickedChatWhereNotSender(this.state.selectedChat)){
                 firebase
                     .firestore()
@@ -124,19 +139,17 @@ class DashboardComponent extends React.Component{
                     await firebase
                     .firestore()
                     .collection('chats')
-                    .where('users', 'array-contains', _usr.email)
+                    .where('users', 'array-contains-any', [_usr.email, 'coming out', 'education','pride day','traveling'])
                     .onSnapshot(async res => {
                         const chats = res.docs.map(_doc => _doc.data());
                         await this.setState({
                         email: _usr.email,
                         chats: chats
                         })
-                        
                     })
                 }
             })
         }
-        
         
         
 }
