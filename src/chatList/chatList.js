@@ -11,26 +11,12 @@ import Divider from '@material-ui/core/Divider';
 import Button from '@material-ui/core/Button';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import NotificationImportant from '@material-ui/icons/NotificationImportant';
-import ChatRoomsComponent from '../chatRooms/chatrooms'
-import ChatViewComponent from '../chatview/chatView'
-import ChatTextBoxComponent from '../chattextbox/chatTextBox'
-import NewChatComponent from '../newchat/newChat'
-const firebase = require("firebase");
 
 class ChatListComponent extends React.Component {
-    constructor(){
-        super()
-        this.state={
-            selectedChatRoom: null,
-            newChatFormVisible: false,
-            email: null,
-            chatRoom:[],
-            chats:[],
-            
-        }
-    }
+    
  render(){
      const {classes} = this.props
+     console.log("ch",this.props.userName)
      
      if(this.props.chats.length>0){
         return(
@@ -43,25 +29,10 @@ class ChatListComponent extends React.Component {
                         New Message
                     </Button>
                     <Divider></Divider>
-                    <ChatRoomsComponent history={this.props.history} 
-                    userEmail={this.state.email} 
-            selectChatRoomFn={this.selectChatRoom} 
-            chats={this.state.chats} 
-            selectedChatRoomIndex={this.state.selectedChatRoom}
-            newChatRoomBtnFn={this.newChatRoomBtnClicked}
-            chatRoom={this.state.chatRoom}>
-          </ChatRoomsComponent>
-          {
-                this.state.newChatFormVisible?
-                null:
-                <ChatViewComponent 
-                user={this.state.email}
-                chat={this.state.chats[this.state.selectedChatRoom]}
-                room={this.state.chatRoom[this.state.selectedChatRoom]}></ChatViewComponent>
-            }
                     <List>
                         {
                             this.props.chats.map((_chat, _index)=>{
+                                console.log("chat", this.props.userEmail)
                                 return(
                                    <div key={_index}>
                                         <ListItem onClick={()=>this.selectChat(_index)}
@@ -114,10 +85,7 @@ class ChatListComponent extends React.Component {
          
      }
  }   
- selectChatRoom= async (chatIndex)=>{
-    this.setState({selectedChatRoom:chatIndex, newChatFormVisible:false })
-    //this.messageRead()
-}
+
  newChat=()=>{
     this.props.newChatBtnFn()
  }
@@ -127,28 +95,5 @@ class ChatListComponent extends React.Component {
  }
  
  userIsSender = (chat) => chat.messages[chat.messages.length - 1].sender === this.props.userEmail;
- componentDidMount= ()=>{
-    firebase.auth().onAuthStateChanged(async _usr => {
-     
-        if(!_usr){
-            this.props.history.push('/login')
-        }
-        else{
-            await firebase
-            .firestore()
-            .collection('chatrooms')
-            .where('users', 'array-contains', _usr.email)
-            .onSnapshot(async res => {
-                const chats = res.docs.map(_doc => _doc.data());
-                const rooms =  res.docs.map(_doc=>_doc.data().chatroom )
-                await this.setState({
-                email: _usr.email,
-                chats: chats,
-                chatRoom: rooms
-                })
-            })
-        }
-    })
-}
 }
 export default withStyles(styles)(ChatListComponent)
