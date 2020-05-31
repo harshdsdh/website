@@ -17,8 +17,8 @@ class WelcomePage extends React.Component{
         return(<main className={classes.main}>
             <CssBaseline></CssBaseline>
             <Paper className={classes.paper}>
-            <Button href="../login/login" color="50c49f" size='large'>LogIn</Button><br/>
-            <Button href='../signup/signup' color='50c49f' size='large'>SignUp</Button>
+            <Button href='./login' color="50c49f" size='large'>LogIn</Button>
+            <Button href='./signup' color='50c49f' size='large'>SignUp</Button>
 
                 <Typography component='h2' variant='h2' color='50c49f' >
                 Welcome to AfrikLesLuv
@@ -32,7 +32,7 @@ class WelcomePage extends React.Component{
                 <Typography component='h4'  fontColor='50c49f'>
                 Friendly
                 </Typography>
-                <Typography component='h3' variant='h3' font-color='50c49f'>
+                <Typography component='h3' variant='h4' font-color='50c49f'>
                 Make relationships, friendships every day without any limits for free! Be who you are on AfrikLesLuv chat.
                 </Typography>
                 <Typography component='h4' variant='h4' font-color='50c49f'>
@@ -47,9 +47,9 @@ class WelcomePage extends React.Component{
             </Paper>
             <footer>
             
-            <Link to='./privacy'>Privacy Policy</Link><br/>
-            <Link to='./cookies'>Cookie Policy</Link><br/>
-            <Link to='./safety'>Safety Policy</Link><br/>
+            <Link to='./privacy' target="_blank">Privacy Policy</Link>
+            <Link to='./cookies' target="_blank">Cookie Policy</Link>
+            <Link to='./safety' target="_blank">Safety Policy</Link>
 
             </footer>
         </main>)
