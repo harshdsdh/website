@@ -9,30 +9,33 @@ const styles = theme => ({
       overflowY: 'scroll',
       top: '50px',
       width: 'calc(100% - 300px)',
-      position: 'absolute'
+      position: 'absolute',
     },
   
     userSent: {
-      float: 'left',
-      clear: 'both',
-      padding: '20px',
-      boxSizing: 'border-box',
-      wordWrap: 'break-word',
-      marginTop: '10px',
-      backgroundColor: '#707BC4',
-      color: 'white',
-      width: '300px',
-      borderRadius: '10px'
-    },
-  
-    friendSent: {
       float: 'right',
       clear: 'both',
       padding: '20px',
       boxSizing: 'border-box',
       wordWrap: 'break-word',
       marginTop: '10px',
-      backgroundColor: '#707BC4',
+      //backgroundColor: '#707BC4',
+      backgroundColor: "#"+ Math.floor(Math.random()*16777215).toString(16),
+      color: 'white',
+      width: '300px',
+      borderRadius: '10px',
+      
+    },
+  
+    friendSent: {
+      float: 'left',
+      clear: 'both',
+      padding: '20px',
+      boxSizing: 'border-box',
+      wordWrap: 'break-word',
+      marginTop: '10px',
+      //backgroundColor: '#707BC4',
+      backgroundColor: "#"+ Math.floor(Math.random()*16777215).toString(16),
       color: 'white',
       width: '300px',
       borderRadius: '10px'

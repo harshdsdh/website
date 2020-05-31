@@ -16,6 +16,7 @@ class ChatViewComponent extends React.Component{
   }
     render(){
         const {classes, chat, user} = this.props
+        const {randomColor} ={color:'red'}
         if(chat===undefined){
             return(<main id='chatview-container' className={classes.content}></main>)
 
@@ -31,7 +32,7 @@ class ChatViewComponent extends React.Component{
                           chat.messages.map((_msg,_index)=>{
                               return (
                                   <div key={_index} className={_msg.sender===user? classes.userSent:classes.friendSent}>
-                                      {(_msg.sender===user? 'you':_msg.sender) +' : '+ _msg.message}
+                                      <div style={{randomColor}}>{(_msg.sender===user? 'you':_msg.sender) +' : '+ _msg.message}</div>
                                   </div>
                               )
                           })

@@ -17,8 +17,8 @@ class WelcomePage extends React.Component{
         return(<main className={classes.main}>
             <CssBaseline></CssBaseline>
             <Paper className={classes.paper}>
-            <Button href="../login/login" color="50c49f" size='large'>LogIn</Button><br/>
-            <Button href='../signup/signup' color='50c49f' size='large'>SignUp</Button>
+            <Button href="./login" color="50c49f" size='large'>LogIn</Button><br/>
+            <Button href='./signup' color='50c49f' size='large'>SignUp</Button>
 
                 <Typography component='h2' variant='h2' color='50c49f' >
                 Welcome to AfrikLesLuv
@@ -47,8 +47,8 @@ class WelcomePage extends React.Component{
             </Paper>
             <footer>
             
-            <Link to='./privacy'>Privacy Policy</Link><br/>
-            <Link to='./cookies'>Cookie Policy</Link><br/>
+            <Link to='./privacy' target="_blank">Privacy Policy</Link><br/>
+            <a href="./cookies" target="_blank">Cookie Policy</a><br/>
             <Link to='./safety'>Safety Policy</Link><br/>
 
             </footer>
