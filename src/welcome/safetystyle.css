@@ -1,0 +1,214 @@
+@import url('https://themes.googleusercontent.com/fonts/css?kit=ROtcsjTUsc7Z0ntfwuLDxWcWxqpYqcpQT6xe8embC0tdJEyLnsapOgH9Q8NreHdG');
+
+        ol {
+            margin: 0;
+            padding: 0
+        }
+
+        table td,
+        table th {
+            padding: 0
+        }
+
+        .c0 {
+            color: #000000;
+            font-weight: 400;
+            text-decoration: none;
+            vertical-align: baseline;
+            font-size: 12pt;
+            font-family: "Rockwell";
+            font-style: normal
+        }
+
+        .c9 {
+            background-color: #ffffff;
+            padding-top: 15pt;
+            padding-bottom: 7.5pt;
+            line-height: 1.0;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        .c5 {
+            background-color: #ffffff;
+            padding-top: 0pt;
+            padding-bottom: 7.5pt;
+            line-height: 1.0;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        .c1 {
+            color: #000000;
+            font-weight: 700;
+            text-decoration: none;
+            vertical-align: baseline;
+            font-size: 12pt;
+            font-family: "Rockwell";
+            font-style: italic
+        }
+
+        .c6 {
+            padding-top: 0pt;
+            padding-bottom: 0pt;
+            line-height: 1.0;
+            orphans: 2;
+            widows: 2;
+            text-align: left;
+            height: 10pt
+        }
+
+        .c10 {
+            padding-top: 15pt;
+            padding-bottom: 15pt;
+            line-height: 1.0;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        .c2 {
+            padding-top: 0pt;
+            padding-bottom: 10pt;
+            line-height: 1.1500000000000001;
+            orphans: 2;
+            widows: 2;
+            text-align: justify
+        }
+
+        .c8 {
+            color: #000000;
+            text-decoration: none;
+            vertical-align: baseline;
+            font-family: "Rockwell";
+            font-style: normal
+        }
+
+        .c4 {
+            background-color: #ffffff;
+            max-width: 468pt;
+            padding: 72pt 72pt 72pt 72pt
+        }
+
+        .c3 {
+            font-size: 12pt;
+            font-weight: 700
+        }
+
+        .c7 {
+            height: 10pt
+        }
+
+        .title {
+            padding-top: 1pt;
+            color: #000000;
+            border-top-width: 1.5pt;
+            font-size: 24pt;
+            border-top-color: #fc7715;
+            padding-bottom: 10pt;
+            font-family: "Rockwell";
+            line-height: 1.0;
+            orphans: 2;
+            border-top-style: solid;
+            widows: 2;
+            text-align: right
+        }
+
+        .subtitle {
+            padding-top: 0pt;
+            color: #000000;
+            font-size: 10pt;
+            padding-bottom: 36pt;
+            font-family: "Calibri";
+            line-height: 1.0;
+            orphans: 2;
+            widows: 2;
+            text-align: right
+        }
+
+        li {
+            color: #000000;
+            font-size: 10pt;
+            font-family: "Rockwell"
+        }
+
+        p {
+            margin: 0;
+            color: #000000;
+            font-size: 10pt;
+            font-family: "Rockwell"
+        }
+
+        h1 {
+            padding-top: 15pt;
+            color: #000000;
+            font-size: 16pt;
+            padding-bottom: 2pt;
+            font-family: "Rockwell";
+            line-height: 1.1500000000000001;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        h2 {
+            padding-top: 12pt;
+            color: #000000;
+            font-size: 14pt;
+            padding-bottom: 4pt;
+            font-family: "Rockwell";
+            line-height: 1.1500000000000001;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        h3 {
+            padding-top: 0pt;
+            color: #000000;
+            font-size: 12pt;
+            padding-bottom: 0pt;
+            font-family: "Rockwell";
+            line-height: 1.1500000000000001;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        h4 {
+            padding-top: 12pt;
+            color: #000000;
+            font-size: 11pt;
+            padding-bottom: 0pt;
+            font-family: "Rockwell";
+            line-height: 1.1500000000000001;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        h5 {
+            padding-top: 10pt;
+            color: #c95702;
+            font-size: 11pt;
+            padding-bottom: 0pt;
+            font-family: "Rockwell";
+            line-height: 1.1500000000000001;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+
+        h6 {
+            padding-top: 0pt;
+            color: #fc7715;
+            font-size: 11pt;
+            padding-bottom: 0pt;
+            font-family: "Rockwell";
+            line-height: 1.1500000000000001;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
