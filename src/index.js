@@ -16,17 +16,7 @@ import PrivacyPage from './welcome/privacy'
 const firebase= require('firebase')
 require("firebase/firestore")
 
-firebase.initializeApp({
 
-  apiKey: "AIzaSyCZYMkHyjiShFOgt8DhJ7tmHLJP1JsyswE",
-  authDomain: "velvety-dolphin-175410.firebaseapp.com",
-  databaseURL: "https://velvety-dolphin-175410.firebaseio.com",
-  projectId: "velvety-dolphin-175410",
-  storageBucket: "velvety-dolphin-175410.appspot.com",
-  messagingSenderId: "934789990619",
-  appId: "1:934789990619:web:a07a2248a639080ea6e4fe",
-  measurementId: "G-RYPPHFJPC8"
-});
 
 const routing=(
   <Router>
