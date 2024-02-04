@@ -2,7 +2,7 @@ import './App.css';
 import React from 'react';
 import { Provider } from 'react-redux';
 import store from './store';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import CV from './CV'
 import Home from './Home'
 import Publications from './Publications';
@@ -18,7 +18,7 @@ function App() {
             <li><Link to="/">Home</Link></li>
             <li><Link to="/pub">Publications</Link></li>
             <li><Link to="/blogs">Blogs</Link></li>
-            <li><a href="./CV.pdf" download="Harshit_cv.pdf">CV</a></li>
+            <li><a href="/CV.pdf" download="Harshit_cv.pdf">CV</a></li>
           </ul>
         </nav>
 
