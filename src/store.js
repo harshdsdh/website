@@ -35,7 +35,8 @@ const parseMarkdown = (markdown) => {
 
 export const fetchBlogsThunk = () => async (dispatch) => {
     try {
-        const response = await fetch('./blog/blogsNumber.md');
+        // const response = await fetch('./blog/blogsNumber.md');
+        const response = await fetch('https://harshdsdh.github.io/website/blog/blogsNumber.md');
         let totalBlogs = parseMarkdown(await response.text());
         dispatch(fetchBlogsSuccessAction(totalBlogs));
 
