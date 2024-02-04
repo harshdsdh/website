@@ -47,7 +47,7 @@ export const fetchBlogsThunk = () => async (dispatch) => {
 
 export const fetchBlogPostContentThunk = (postId) => async (dispatch) => {
     try {
-        const response = await fetch(`./blog/post-${postId}.md`);
+        const response = await fetch(`https://harshdsdh.github.io/website/blog/post-${postId}.md`);
         const data = await response.text();
         let parsedData = parseMarkdown(data);
         parsedData.id = postId;
