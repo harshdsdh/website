@@ -15,7 +15,6 @@ function Blog() {
 
     const selectedPostId = useSelector((state) => state.blogID);
     const [prevSelectedPostId, setPrevSelectedPostId] = useState(null);
-    console.log(useSelector((state) => state));
 
     useEffect(() => {
         if (typeof selectedPostId == 'number') {
@@ -31,7 +30,6 @@ function Blog() {
 
     useEffect(() => {
         return () => {
-            // This cleanup effect will be called when the component unmounts
             dispatch(resetBlogPost());
         };
     }, [dispatch]);

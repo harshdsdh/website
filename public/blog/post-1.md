@@ -1,3 +1,3 @@
-# blog 1
+# Blog 1
 
 Working on seed word clustering on text data. 

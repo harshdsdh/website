@@ -7,7 +7,9 @@ function Home() {
 
     return (
         <div className="home-container">
+            <img className="home-image" src="./website/profile_pic.jpg" alt="profile" width='auto' height='300px'></img>
             <p className="home-text">{homeText}</p>
+            <footer></footer>
         </div>
     );
 
