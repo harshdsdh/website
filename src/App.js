@@ -18,7 +18,7 @@ function App() {
             <li><Link to="/">Home</Link></li>
             <li><Link to="/pub">Publications</Link></li>
             <li><Link to="/blogs">Blogs</Link></li>
-            <li><a href="./website/CV.pdf" target="_blank">CV</a></li>
+            <li><a href="./CV.pdf" target="_blank">CV</a></li>
           </ul>
         </nav>
 
