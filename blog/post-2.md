@@ -1,3 +1,3 @@
-# blog 2
+# Blog 2
 
 blog content 2
