@@ -2,8 +2,7 @@ import React from "react";
 import "./styles.css";
 
 function Home() {
-    const homeText = "Hi, I am Harshit Mishra. I work as a Software Engineer in Warsaw, Poland. Apart from my work, I am a hobbyist deep learning researcher. \
-    I have Published papers in some conferences and still working on some new ideas. "
+    const homeText = "Hi, I am Harshit Mishra. I am a PhD student at Syracuse Univeristy. My interest lies in social media networks. And ways to mitigate Bias in online spaces."
 
     return (
         <div className="home-container">
